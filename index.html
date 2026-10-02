@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>very epic letter i made for you ❤️</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Kalam:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #fbe9ee;
+    --paper: #fffafb;
+    --ink: #3b1226;
+    --soft: #8a5068;
+    --accent: #d6336c;
+    --line: #f0c4d3;
+    box-sizing: border-box;
+    padding-top: env(safe-area-inset-top, 0px);
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #1d0b15; --paper: #2a1220; --ink: #f6dbe4; --soft: #c795ab; --accent: #ff6b95; --line: #4a2236;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #1d0b15; --paper: #2a1220; --ink: #f6dbe4; --soft: #c795ab; --accent: #ff6b95; --line: #4a2236;
+  }
+  html { scroll-padding-top: env(safe-area-inset-top, 0px); }
+  *, *::before, *::after { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: "Kalam", "Segoe Print", "Comic Sans MS", cursive;
+    font-weight: 400;
+    line-height: 1.75;
+  }
+  main { max-width: 720px; margin: 0 auto; padding: 56px 20px 96px; }
+
+  h1 {
+    font-family: "Caveat", "Segoe Script", cursive;
+    font-weight: 700;
+    font-size: clamp(2.6rem, 9vw, 4.8rem);
+    line-height: 1.05;
+    text-align: center;
+    margin: 0 0 36px;
+  }
+  .heart { display: inline-block; animation: beat 1.4s ease-in-out infinite; }
+  @keyframes beat { 0%, 60%, 100% { transform: scale(1); } 15% { transform: scale(1.25); } 30% { transform: scale(1); } 45% { transform: scale(1.18); } }
+  @media (prefers-reduced-motion: reduce) { .heart { animation: none; } }
+
+  details {
+    background: var(--paper);
+    border: 2px solid var(--line);
+    border-radius: 14px;
+  }
+  summary {
+    list-style: none;
+    cursor: pointer;
+    padding: 18px 22px;
+    font-family: "Caveat", cursive;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: var(--accent);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    border-radius: 12px;
+  }
+  summary::-webkit-details-marker { display: none; }
+  summary::after { content: "▾"; transition: transform .25s ease; }
+  details[open] > summary::after { transform: rotate(180deg); }
+  details[open] > summary { border-bottom: 2px dashed var(--line); border-radius: 12px 12px 0 0; }
+  summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+
+  .letter { padding: 28px 22px 40px; font-size: 1.12rem; }
+  .letter p { margin: 0 0 1.1em; }
+  .meta {
+    font-size: .95rem; color: var(--soft);
+    border: 1px dashed var(--line); border-radius: 10px;
+    padding: 10px 14px; margin-bottom: 1.6em;
+  }
+  .sig { font-family: "Caveat", cursive; font-size: 1.9rem; color: var(--accent); margin-top: 1.4em; }
+  .divider { text-align: center; color: var(--accent); margin: 2em 0 1.2em; font-family: "Caveat", cursive; font-size: 1.6rem; }
+  ol.reasons { margin: 0; padding-left: 3.2em; }
+  ol.reasons li { margin-bottom: .55em; padding-left: .3em; }
+  ol.reasons li::marker { color: var(--accent); font-family: "Caveat", cursive; font-size: 1.15em; }
+  .loading { text-align: center; color: var(--soft); }
+</style>
+</head>
+<body>
+<main>
+  <h1>very epic letter i made for you <span class="heart">❤️</span></h1>
+
+  <details id="letterBox">
+    <summary>open me</summary>
+    <div class="letter" id="letter"></div>
+  </details>
+</main>
+
+<script>
+/* ---- EDIT THESE TWO ---- */
+const HER_NAME = "[Her Name]";
+const MY_NAME  = "[Your Name]";
+/* ------------------------ */
+
+const intro = [
+  `Dear ${HER_NAME},`,
+  `I tried to write you a normal letter. One page, neat handwriting, a few sweet lines. It lasted about four sentences before I realized I had way too much to say and no chance of fitting it on one page. So I made this instead, and I'm sorry in advance, because it's a lot.`,
+  `First, thank you. Thank you for being the person I want to tell everything to. Good news, bad news, the weird thing I saw on the way home, I want you to hear it first. You made that a habit of mine without ever asking, and it's one of my favorite parts of every day.`,
+  `You make ordinary things feel special. A walk, a snack, a dumb video, sitting in silence next to each other: somehow they all turn into the good part of my day when you're around. I didn't know that was possible until I met you.`,
+  `I love the way you laugh. I love the way you care about people. I love that you're brave in ways you don't give yourself credit for, and that you keep going even on days that feel heavy. I'm proud of you more often than you know, and I'm rooting for you in everything.`,
+  `I'm not perfect and I won't pretend to be. But I promise to keep showing up, keep listening, keep laughing at your jokes (even when you've told them before), and keep choosing you. Every single day.`,
+  `So, I tried to count the reasons I love you. I got a little carried away. What follows is a never-ending list, and you're welcome to read it all, or to read a few and just trust that the rest say the same thing: I'm so glad it's you.`
+];
+
+const openers = [
+  "I love how", "I love it when", "I love that", "Reason enough:", "I'm obsessed with the way",
+  "My heart does a little flip when", "I'll never get over how", "I secretly adore how",
+  "It still amazes me that", "Honestly, I love that"
+];
+const subjects = [
+  "you laugh at your own jokes before the punchline", "you scrunch your nose when you're thinking",
+  "you steal the last bite and call it sharing", "you get excited about the smallest things",
+  "you hum when you think nobody's listening", "you text me the random things that reminded you of me",
+  "you take forever to choose a snack and still pick right", "you're kind to strangers without making a big deal of it",
+  "you fall asleep mid-sentence", "you say my name", "you hold my hand without even thinking about it",
+  "you get competitive over absolutely nothing", "you tell me about your day in full detail",
+  "you wear my hoodie better than I do", "you sing the wrong lyrics with total confidence",
+  "you remember tiny things I said weeks ago", "you make a plain Tuesday feel like a holiday",
+  "you look at me while I'm trying to be serious and I crack up", "you dance around the kitchen",
+  "you believe in me on the days I don't", "you pet every single dog we walk past",
+  "you laugh so hard you go completely silent", "you steal my fries", "you stay up late talking with me",
+  "you make the best faces in photos", "you are unapologetically yourself",
+  "you stand your ground about the things that matter", "you care so deeply about the people you love",
+  "you're my first text of the day and my last", "you get sleepy and say my name quietly"
+];
+const endings = [
+  "and it makes my whole day.", "and I fall for you all over again.", "and I can't stop smiling.",
+  "and honestly, same.", "and I feel like the luckiest person alive.", "and that's reason enough.",
+  "and I never want that to change.", "and it's my favorite thing.", "and I think about it constantly.",
+  "and I thank the universe for you.", "and it feels like home.", "and I'm completely done for.",
+  "and nobody else does it like you.", "and I'd pick it over anything.", "and it's the best part of my day.",
+  "and my heart just melts.", "and that is so very you.", "and I get to be there for it.",
+  "and I'd tell you more but I'm out of breath.", "and that's why you're my person."
+];
+
+const TOTAL = openers.length * subjects.length * endings.length; // 6000
+const CHUNK = 400;
+
+const box = document.getElementById("letterBox");
+const letter = document.getElementById("letter");
+let built = false;
+
+function reasonAt(i) {
+  const k = (i * 7919) % TOTAL; // shuffles the order so it doesn't feel patterned
+  const o = k % openers.length;
+  const s = Math.floor(k / openers.length) % subjects.length;
+  const e = Math.floor(k / (openers.length * subjects.length)) % endings.length;
+  return `${openers[o]} ${subjects[s]}, ${endings[e]}`;
+}
+
+function build() {
+  built = true;
+  const meta = document.createElement("div");
+  meta.className = "meta";
+  meta.textContent = "Estimated reading time: calculating…";
+  letter.appendChild(meta);
+
+  intro.forEach(t => { const p = document.createElement("p"); p.textContent = t; letter.appendChild(p); });
+
+  const div = document.createElement("div");
+  div.className = "divider";
+  div.textContent = `~ ${TOTAL.toLocaleString()} reasons i love you, ${HER_NAME} ~`;
+  letter.appendChild(div);
+
+  const ol = document.createElement("ol");
+  ol.className = "reasons";
+  letter.appendChild(ol);
+
+  let i = 0;
+  function next() {
+    const frag = document.createDocumentFragment();
+    const end = Math.min(i + CHUNK, TOTAL);
+    for (; i < end; i++) {
+      const li = document.createElement("li");
+      li.textContent = reasonAt(i);
+      frag.appendChild(li);
+    }
+    ol.appendChild(frag);
+    if (i < TOTAL) { requestAnimationFrame(next); } else { finish(); }
+  }
+  next();
+
+  function finish() {
+    const words = letter.textContent.split(/\s+/).length;
+    const mins = Math.round(words / 200);
+    const hrs = (mins / 60).toFixed(1);
+    meta.textContent = `Estimated reading time: about ${hrs} hours (${words.toLocaleString()} words). Snacks recommended.`;
+
+    const p1 = document.createElement("p");
+    p1.style.marginTop = "2em";
+    p1.textContent = `Wait, you actually made it to the end?! Okay, now I really can't hide it: you're the best thing that's happened to me, ${HER_NAME}. And there are still a million more reasons where those came from.`;
+    const p2 = document.createElement("p");
+    p2.textContent = "I love you. Truly, deeply, and in a way that doesn't fit in any letter, no matter how long.";
+    const sig = document.createElement("div");
+    sig.className = "sig";
+    sig.textContent = `Forever yours, ${MY_NAME} ❤️`;
+    letter.append(p1, p2, sig);
+  }
+}
+
+box.addEventListener("toggle", () => { if (box.open && !built) build(); });
+</script>
+</body>
+</html>
